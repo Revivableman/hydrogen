@@ -1,0 +1,41 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /hydrogen
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/revivable?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: ENC(aVrbBTP868YhwbjYGCsZfUVSdX3QqTfM0MqjZhEbNTc=)
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  redis:
+    host: 192.168.242.3
+    port: 6379
+#    password: liuchenyang_1217
+
+logging:
+  level:
+    com.revivable.hydrogen.dao: trace
+  pattern: '%p%m%n'
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+  config-location: classpath:mybatis-config.xml
+  type-aliases-package: com.revivable.hydrogen.entity
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: not_null
+
+jasypt:
+  encryptor:
+    password: lcy
