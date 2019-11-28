@@ -20,7 +20,11 @@ spring:
   redis:
     host: 192.168.242.3
     port: 6379
-#    password: liuchenyang_1217
+  mail:
+    host: smtp.163.com
+    username: your 163 mail
+    password: 邮箱第三方登录授权码(不是密码)
+    default-encoding: UTF-8
 
 logging:
   level:

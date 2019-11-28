@@ -61,6 +61,17 @@
             <version>2.1.2</version>
         </dependency>
 
+        <!-- 邮件 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
+        <!-- thymeleaf -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
 
         <!-- springboot解析页面 -->
         <!--<dependency>-->
